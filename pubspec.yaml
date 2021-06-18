@@ -1,0 +1,29 @@
+name: wiki_search
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^0.13.3
+  stacked: ^2.1.8
+  stacked_services: ^0.8.7
+  url_launcher: ^6.0.6
+  loading_indicator: 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  build_runner: ^2.0.4
+  stacked_generator: ^0.4.6
+
+flutter:
+  uses-material-design: true
