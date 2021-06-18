@@ -6,18 +6,18 @@
 
 // ignore_for_file: public_member_api_docs
 
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../ui/second/second_view.dart';
+import '../ui/splash_screen/splash_view.dart';
 import '../ui/startup/startup_view.dart';
 
 class Routes {
-  static const String startUpView = '/';
-  static const String secondView = '/second-view';
+  static const String splashScreen = '/';
+  static const String startUpView = '/start-up-view';
   static const all = <String>{
+    splashScreen,
     startUpView,
-    secondView,
   };
 }
 
@@ -25,21 +25,21 @@ class StackedRouter extends RouterBase {
   @override
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
+    RouteDef(Routes.splashScreen, page: SplashScreen),
     RouteDef(Routes.startUpView, page: StartUpView),
-    RouteDef(Routes.secondView, page: SecondView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, StackedRouteFactory>{
-    StartUpView: (data) {
-      return CupertinoPageRoute<dynamic>(
-        builder: (context) => StartUpView(),
+    SplashScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => SplashScreen(),
         settings: data,
       );
     },
-    SecondView: (data) {
-      return CupertinoPageRoute<dynamic>(
-        builder: (context) => SecondView(),
+    StartUpView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => StartUpView(),
         settings: data,
       );
     },
