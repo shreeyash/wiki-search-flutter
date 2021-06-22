@@ -11,12 +11,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  connectivity: ^3.0.6
   cupertino_icons: ^1.0.2
   http: ^0.13.3
+  loading_indicator: null
+  overlay_support: ^1.2.1
   stacked: ^2.1.8
   stacked_services: ^0.8.7
   url_launcher: ^6.0.6
-  loading_indicator: 
 
 dev_dependencies:
   flutter_test:
@@ -30,5 +32,3 @@ flutter:
 
   assets:
     - assets/wikiLogo.png
-
-
