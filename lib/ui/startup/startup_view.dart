@@ -74,6 +74,8 @@ class _StartUpViewState extends State<StartUpView> {
                                 model.updateSearchKey();
                                 model.initialise();
                               }
+                            } else {
+                              showConnectivitySnackbar(ConnectivityResult.none);
                             }
                           },
                         ),
